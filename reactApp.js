@@ -1,5 +1,5 @@
 
-// Deafault App component that all other compents are rendered through
+// Default App component that all other components are rendered through
 function App(props){
   return (
     <div>
@@ -9,8 +9,11 @@ function App(props){
   )
 }
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 //Render the application
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
